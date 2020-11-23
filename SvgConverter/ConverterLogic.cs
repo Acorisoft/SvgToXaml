@@ -575,20 +575,20 @@ namespace SvgConverter
 
         internal static string BuildDrawingGroupName(string elementName, ResKeyInfo resKeyInfo)
         {
-            var rawName = elementName + "DrawingGroup";
+            var rawName = "UI.Banners." + elementName;
             return BuildResKey(rawName, resKeyInfo);
         }
         internal static string BuildDrawingImageName(string elementName, ResKeyInfo resKeyInfo)
         {
-            var rawName = elementName + "DrawingImage";
+            var rawName = "UI.Banners." + elementName;
             return BuildResKey(rawName, resKeyInfo);
         }
 
         internal static string BuildGeometryName(string name, int? no, ResKeyInfo resKeyInfo)
         {
             var rawName = no.HasValue
-                ? $"{name}Geometry{no.Value}"
-                : $"{name}Geometry"; //dont add number if only one Geometry
+                ? $"UI.Geometries.{name}{no.Value}"
+                : $"UI.Geometries.{name}"; //dont add number if only one Geometry
             return BuildResKey(rawName, resKeyInfo);
         }
 

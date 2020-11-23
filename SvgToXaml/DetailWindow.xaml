@@ -7,7 +7,10 @@
         xmlns:textViewer="clr-namespace:SvgToXaml.TextViewer"
         mc:Ignorable="d" 
         Title="{Binding Filename}" Height="375" Width="300"
-        d:DataContext="{x:Static viewModels:SvgImageViewModel.DesignInstance}">
+        d:DataContext="{x:Static viewModels:SvgImageViewModel.DesignInstance}"
+        MinHeight="640"
+        MinWidth="800"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl TabStripPlacement="Bottom">
             <TabItem Header="View Image">
